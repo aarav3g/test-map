@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>All Companies</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>All Companies</h1>
+<p><a href="index.html">Back to Map</a></p>
+<ul id="company-list"></ul>
+
+<script>
+fetch('companies.json')
+  .then(res => res.json())
+  .then(data => {
+    const list = document.getElementById('company-list');
+    data.forEach(company => {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="company.html?id=${company.id}">${company.name}</a> (Booth ${company.booth})`;
+      list.appendChild(li);
+    });
+  });
+</script>
+</body>
+</html>
