@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Company</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="content"></div>
+<p><a href="index.html">Back to Map</a> | <a href="companies.html">All Companies</a></p>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
+
+fetch('companies.json')
+  .then(res => res.json())
+  .then(data => {
+    const company = data.find(c => c.id === id);
+    if (!company) {
+      document.getElementById('content').innerHTML = '<p>Company not found.</p>';
+      return;
+    }
+    document.getElementById('content').innerHTML = `
+      <h1>${company.name}</h1>
+      <p><strong>Booth:</strong> ${company.booth}</p>
+      <p>${company.description}</p>
+      <p><a href="${company.resumeLink}" target="_blank">Submit Your Resume</a></p>
+    `;
+  });
+</script>
+</body>
+</html>

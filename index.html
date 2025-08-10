@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Career Fair Map</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Career Fair Map</h1>
+<p><a href="companies.html">See All Companies</a></p>
+
+<!-- Map Image -->
+<img src="cflayout-1.png" usemap="#image-map">
+
+<!-- Clickable Booth Areas -->
+<map name="image-map">
+    <area alt="acme" title="acme" href="company.html?id=acme" coords="1596,1063,1506,1177" shape="rect">
+    <area alt="globex" title="globex" href="company.html?id=globex" coords="1596,970,1503,854" shape="rect">
+</map>
+
+<!-- JS for responsive image maps -->
+<script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  imageMapResize();
+});
+</script>
+
+</body>
+</html>

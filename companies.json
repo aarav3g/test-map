@@ -1,0 +1,16 @@
+[
+  {
+    "id": "acme",
+    "name": "Acme Corp",
+    "booth": "A1",
+    "description": "Innovative tech company building rocket-powered products.",
+    "resumeLink": "https://www.dropbox.com/scl/fo/88cjoe2y1zf3jsanu6biu/AAIFB_OR2SfuyE5M0A-GjbE?rlkey=nsn9daqb4xpwqrj0l7vytrsp7&st=3btwj22j&dl=0"
+  },
+  {
+    "id": "globex",
+    "name": "Globex Inc",
+    "booth": "B2",
+    "description": "Global leader in futuristic business solutions.",
+    "resumeLink": "https://www.dropbox.com/scl/fo/jqn7uatm8qvr3vk6snmcv/ALLT5o_L0QRl3mLG4lZCuBQ?rlkey=vo1htdj98ry1j5ztrvxuu5ctw&st=dpu4rjmy&dl=0"
+  }
+]
